@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <title>Ashrith Reddy</title>
   <!-- <a href='https://pngtree.com/freebackground/portfolio-memphis-playful-abstract-pink_1347354.html'>free background photos from pngtree.com/</a> -->
 
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
   <link rel="shortcut icon" href="assets/img/logo_new.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="assets/css/themify-icons.css">
   
@@ -32,7 +33,19 @@
 
 </head>
 <body class="theme-purple">
-  
+  <script>
+    $(document).ready(function() {
+        $('.navbar-toggler').click(function() {
+            var $icon = $(this).find('.ti-menu');
+            if ($icon.length > 0) {
+                $icon.removeClass('ti-menu').addClass('ti-close');
+            } else {
+                $icon = $(this).find('.ti-close');
+                $icon.removeClass('ti-close').addClass('ti-menu');
+            }
+        });
+    });
+    </script>
   <!-- Back to top button -->
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
@@ -40,7 +53,7 @@
   
   <div class="vg-page page-home" id="home" style="background-image: url(assets/img/backgroung.jpg)">
     <!-- Navbar -->
-    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="750" style="background-color: #52505E; display: flex;">
+    <div class="navbar navbar-expand-lg navbar-dark sticky-top" data-offset="750" style="background-color: #52505E; display: flex;">
       <div class="container" style="display: flex; justify-content: space-between; padding-left: 3px; padding-right: 3px; margin-left: 15px; margin-right:15px;max-width: 100%;">
         <a href="" class="navbar-brand" style="margin-left: 10px;"><img src='assets/img/logo_new.png' style="width: 35px; height: 35px;"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
@@ -382,7 +395,7 @@
   
   <!-- Footer -->
   <div class="vg-footer" id='contact'>
-    <h1 class="text-center">Contact Me</h1>
+    <h1 class="text-center">Contact</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 py-3">
@@ -402,7 +415,7 @@
         </div>
         <div class="col-md-6 col-lg-3 py-3">
           <div class="float-lg-right">
-            <p style='text-align:center;'>Contact me</p>
+            <p style='text-align:center;'>Reach out to me</p>
             <ul class="social-icons list-unstyled">
               <li><a href="mailto:ashrithreddyt@gmail.com"><i class="fas fa-envelope"></i></a></li>
             </ul>
@@ -414,8 +427,6 @@
     </div>
   </div> <!-- End footer -->
   
-  
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
     
   <script src="assets/js/bootstrap.bundle.min.js"></script>
     
