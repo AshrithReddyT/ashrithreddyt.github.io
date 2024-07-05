@@ -7,7 +7,7 @@
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
-  --purple: #6f42c1;
+  --purple: #52505E;
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
@@ -24,7 +24,7 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #f8f9fa;
+  --light: #ECAB9E;
   --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -4251,6 +4251,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link {
+  font-weight: bold;
   display: block;
   padding: 0.5rem 1rem;
 }
@@ -4335,8 +4336,11 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  position: relative;
-  display: -ms-flexbox;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  /* display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -4344,7 +4348,7 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem; */
 }
 
 .navbar .container,
@@ -4692,11 +4696,11 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #F4EEEE;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-  color: #fff;
+  color: #F4EEEE;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -4704,7 +4708,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 1);
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -4715,7 +4719,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
+  color: #F4EEEE;
 }
 
 .navbar-dark .navbar-toggler {
@@ -4728,18 +4732,22 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0);
 }
 
 .navbar-dark .navbar-text a {
-  color: #fff;
+  color: #F4EEEE;
 }
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
-  color: #fff;
+  color: #F4EEEE;
 }
 
 .card {
+  display: inline-block; /* Ensure cards stay inline */
+  margin-right: 15px; /* Optional: Adjust spacing between cards */
+  vertical-align: top; /* Align cards at the top */
+  width: 300px; /* Example width for each card */
   position: relative;
   display: -ms-flexbox;
   display: flex;
