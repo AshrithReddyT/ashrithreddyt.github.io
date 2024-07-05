@@ -14,6 +14,13 @@
   border-radius: 40px;
 }
 
+.badge-skills {
+  margin-bottom: 8px;
+  padding: 10px 30px;
+  font-size: 14px;
+  border-radius: 40px;
+}
+
 /* Filterable button */
 .filterable-button {
   position: relative;
@@ -55,16 +62,21 @@
 .vg-page {
   position: relative;
   display: block;
-  padding: 80px 0;
-  width: 100%;
+  padding: 0; /* Remove padding to ensure it takes the full height */
+  width: 100vw;
   overflow: hidden;
+  background-image: url(assets/img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 1; /* Ensure the background image is fully visible */
 }
 
-.page-home {  
-  padding: 25px 0;
-  width: 100%;
-  height: 700px;
-  z-index: 99;
+.page-home {
+  padding: 0; /* Remove padding to ensure it takes the full height */
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; /* Make sure the background image covers the entire container */
+  background-position: center; /* Center the background image */
 }
 
 .page-home::before {
@@ -202,14 +214,14 @@
 .timeline li .title {
   width: 150px;
   padding: 6px 20px;
-  background-color: #747474;
+  background-color: #A1C1C1;
   color: #fff;
   font-weight: 500;
   border-radius: 30px 0 60px 30px;
 }
 
 .timeline li .details {
-  background-color: #f4f5f8;
+  background-color: #f4eeee;
   margin-top: 8px;
   padding: 20px;
   border-radius: 4px;
@@ -457,8 +469,8 @@
   display: block;
   margin: 0;
   padding: 50px 0;
-  background-color: #171925;
-  color: #9FA2AB;
+  background-color: #52505E;
+  color: #FDE7E1;
 }
 
 .footer-info {
@@ -469,7 +481,7 @@
 .vg-footer .list-unstyled li {
   margin-bottom: 6px;
   font-size: 21px;
-  color: #fff;
+  color: #FDE7E1;
 }
 
 .vg-footer .form-control {
@@ -628,35 +640,40 @@
 
 /* Theme Purple */
 .theme-purple .badge-subhead  {
-  background-color: rgba(110, 66, 193, 0.15);
-  color: #6f42c1;
+  background-color: #94B4B2;
+  color: #F4EEEE;
+}
+
+.theme-purple .badge-skills  {
+  background-color: #C1A1A1;
+  color: #F4EEEE;
 }
 
 .theme-purple .filterable-button .btn.selected,
 .theme-purple .filterable-button .btn:focus {
-  background-color: #6f42c1;
+  background-color: #52505E;
   color: #fff;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #6f42c1;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #52505E;
 }
 
 .theme-purple .page-home .badge {
-  background-color: rgba(98, 47, 192, 0.15);
-  color: #6f42c1;
+  background-color: #ECAB9E;
+  color: #F4EEEE;
 }
 
 .theme-purple .page-about .img-place::before {
-  border-color: #6f42c1;
+  border-color: #52505E;
 }
 
 .theme-purple .timeline li:first-child .title {
-  background-color: #6f42c1;
+  background-color: #52505E;
 }
 
 .theme-purple .timeline li:first-child::before {
-  background-color: #6f42c1;
-  box-shadow: 0 0 0 2px #6f42c1;
+  background-color: #52505E;
+  box-shadow: 0 0 0 2px #52505E;
 }
 
 .theme-purple .post-grid .post-category {
-  color: #6f42c1;
+  color: #52505E;
 }
